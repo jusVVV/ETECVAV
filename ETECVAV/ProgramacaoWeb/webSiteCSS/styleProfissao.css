@@ -1,0 +1,332 @@
+/* -------------------------- Main ------------------------- */
+.profissaoMain {
+    margin: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100vw;
+}
+
+
+
+.profissaoMainBox {
+
+    animation: andar 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%; 
+    width: 1200px;
+    display: flex;
+    border-radius: 20px;
+}
+
+
+
+.profissaoIntro {
+
+     width: 380px;
+    min-width: 320px;
+    border-radius: 20px 0 0 20px;
+    padding: 25px;
+    background: #fff;
+    color: var(--primary);
+    border-right: solid var(--primary);
+    box-shadow: var(--shadowStrong);
+}
+
+
+
+.profissaoIntro h1 {
+    margin-bottom: 15px;
+}
+
+
+.profissaoIntro p {
+    color: var(--dark-sub);
+}
+
+
+.profissaoTexto {
+
+    border-radius: 0 20px 20px 0;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    background: var(--primary);
+    color: white; 
+    display: flex;
+    align-items: center;
+    transition:
+    width 1s ease,
+    opacity 0.5s ease;
+    box-shadow: var(--shadowStrong);
+}
+
+
+
+.profissaoTexto p {
+    font-size: 1rem;
+    min-width: 500px;
+    padding: 30px;
+    margin: 0;
+    line-height: 1.7;
+    
+}
+
+.profissaoMainBox:hover .profissaoIntro p{
+    color: black;
+}
+.profissaoMainBox:hover .profissaoTexto {
+    width: 100%;
+    opacity: 1;
+}
+/* -------------------------- Main ------------------------- */
+
+
+
+
+
+
+/* ---------------------- empresas ----------------- */
+
+.empresasQA{
+    width:100%;
+    padding:120px 8%;
+}
+
+.empresaTitle{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.empresaTitle h1{
+    font-size:4rem;
+    margin-bottom:20px;
+    color:var(--primary);
+}
+
+.empresaTitle p{
+    max-width:700px;
+    margin:auto;
+    color:var(--dark-sub);
+    line-height:1.8;
+}
+
+.empresaGrid{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.empresaCard{
+    animation: crescer 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%; 
+
+    width:260px;
+    height:220px;
+    border-radius:30px;
+    background:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    transition:0.4s;
+    box-shadow:var(--shadowStrong);
+    cursor:pointer;
+}
+
+.empresaCard i{
+    font-size:4rem;
+    color:var(--primary);
+    transition:0.4s;
+}
+
+.empresaCard h2{
+    font-size:1.8rem;
+    color:#222;
+    transition:0.4s;
+}
+
+.empresaCard:hover{
+    transform:
+    translateY(-15px)
+    scale(1.03);
+    background:var(--primary);
+}
+
+.empresaCard:hover i,
+
+.empresaCard:hover h2{
+    color:white;
+}
+
+/* ---------------------- empresas ----------------- */
+
+
+
+
+
+
+
+
+/* ---------------------- tabela ----------------- */
+
+.profissaoTableSection{
+    margin:150px auto;
+    width:100%;
+    max-width:1400px;
+    padding:0 5%;
+}
+
+.profissaoTableTitle{
+    margin-bottom:50px;
+}
+
+.profissaoTableTitle span{
+    color:var(--primary);
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+.profissaoTableTitle h1{
+    font-size:4rem;
+    margin:20px 0;
+}
+
+.profissaoTableTitle p{
+    color:var(--dark-sub);
+}
+
+.tableContainer{
+    overflow-x:auto;
+    border-radius:25px;
+    
+    box-shadow:var(--shadowStrong);
+    animation: crescer 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%; 
+}
+
+.profissaoTable{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    background:white;
+}
+
+.profissaoTable th{
+    background:var(--primary);
+    color:white;
+    padding:25px;
+    text-align:left;
+    font-size:1.1rem;
+}
+
+.profissaoTable td{
+    padding:25px;
+    border-bottom:1px solid #eee;
+    color:var(--dark-sub);
+    line-height:1.7;
+}
+
+.profissaoTable tr{
+    transition:0.4s;
+}
+
+.profissaoTable tr:hover{
+    background: #d4d4d4;
+}
+
+.profissaoTable tr:hover td{
+    color: black;
+}
+/* ---------------------- tabela ----------------- */
+
+
+
+
+
+
+
+
+
+/* ------------ responsivo pra celular ------------------ */
+@media(max-width:700px){
+    
+    .profissaoMain {
+        margin: 70px auto;
+        padding: 0 20px;
+        width: 100%;
+    }
+    
+    .profissaoMainBox {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .profissaoIntro {
+        width: 100%;
+        min-width: unset;
+        border-radius: 20px 20px 0 0;
+        border-right: none;
+        border-bottom: solid var(--primary);
+    }
+    
+    .profissaoIntro h1 {
+        font-size: 2rem;
+    }
+    
+    .profissaoTexto {
+        width: 100% !important;
+        opacity: 1;
+        border-radius: 0 0 20px 20px;
+    }
+    
+    .profissaoTexto p {
+        min-width: unset;
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 25px;
+        line-height: 1.8;
+    }
+
+       .empresasQA{
+        padding:90px 6%;
+    }
+
+    .empresaTitle h1{
+        font-size:2.5rem;
+    }
+
+    .empresaGrid{
+        gap:20px;
+    }
+
+    .empresaCard{
+        width:100%;
+        max-width:320px;
+        height:180px;
+    }
+
+    .empresaCard i{
+        font-size:3rem;
+    }
+
+    .empresaCard h2{
+        font-size:1.5rem;
+    }
+
+     .profissaoTableTitle h1{
+        font-size:2.3rem;
+    }
+
+    .profissaoTable th,
+    .profissaoTable td{
+        padding:18px;
+        font-size:0.95rem;
+    }
+}
+
+/* ------------ responsivo pra celular ------------------ */

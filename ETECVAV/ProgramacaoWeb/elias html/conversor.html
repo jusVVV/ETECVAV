@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <link rel="stylesheet" href="conversor.css">
+</head>
+
+<body>
+    <h1 class="top">
+        Unit Conversor <br>
+    </h1>
+    <p class="ref"><a href="index.html">Home</a>
+        <hr color="#443935" width="15%">
+    </p>
+
+    <div class="imagem">
+        <input type="number" id="number" class="botao" placeholder="Insira o valor...">
+
+        <select id="tipo" class="botao">
+            <option value="km"> Km para Milhas</option>
+            <option value="miles"> Milhas para Km</option>
+        </select>
+
+        <button onclick="image()" class="botao"> calcular </button>
+
+        <div id="image" class="imagemSUB"></div>
+
+
+    </div>
+
+
+
+    <script src="conv.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+/* ================= GERAL ================= */
+
+.sectionTitle{
+    margin-bottom:80px;
+}
+
+.sectionTitle span{
+    color:var(--primary);
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+.sectionTitle h1{
+    font-size:4rem;
+    margin:20px 0;
+}
+
+.sectionTitle p{
+    color:var(--dark-sub);
+}
+
+.center{
+    text-align:center;
+}
+
+
+
+
+
+
+
+
+/* ---------------- Timeline ----------- */
+
+.timelineSection{
+     padding:140px 8%;
+}
+
+.timeline{
+    position:relative;
+    max-width:1200px;
+    margin:auto;
+}
+
+.timelineLine{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:5px;
+    height:100%;
+    background:var(--primary);
+    border-radius:999px;
+}
+
+.timelineItem{
+    width:50%;
+    padding:40px;
+}
+
+.left{
+    text-align:right;
+}
+
+.right{
+    margin-left:50%;
+}
+
+.timelineContent{
+    background:white;
+      padding:35px;
+    border-radius:25px;
+    box-shadow:var(--shadowStrong);
+    transition:0.5s;
+}
+
+.timelineContent:hover{
+    transform:translateY(-10px);
+    box-shadow:var(--shadowStrongHover);
+}
+
+.timelineContent i{
+     font-size:45px;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.timelineContent h2{
+    margin-bottom:15px;
+}
+
+.timelineContent p{
+    line-height:30px;
+    color:var(--dark-sub);
+}
+/* ---------------- Timeline ----------- */
+
+
+
+
+
+
+
+
+
+/* ------------ RoadMap --------------- */
+
+.cursoRoadmap{
+    min-height:100vh;
+    padding:120px 8%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.cursoTitle{
+    text-align:center;
+    margin-bottom:80px;
+}
+
+.cursoTitle span{
+    color:var(--primary);
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+.cursoTitle h1{
+    font-size:4rem;
+    margin:20px 0;
+}
+
+.cursoTitle p{
+    color:var(--dark-sub);
+}
+
+
+
+
+.roadmapContainer{
+    width:100%;
+    max-width:1100px;
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
+
+
+
+
+.roadmapItem{
+    width:65%;
+    padding:35px;
+    border-radius:20px;
+    background:white;
+    box-shadow:var(--shadowStrong);
+     border-left:8px solid var(--primary);
+    transition:0.5s;
+}
+
+.roadmapItem:hover{
+    transform:
+    translateY(-10px)
+    scale(1.02);
+    box-shadow:var(--shadowStrongHover);
+}
+
+
+
+
+.left{
+    align-self:flex-start;
+}
+
+.right{
+    align-self:flex-end;
+}
+
+.rightCard {
+    border-left: none;
+    border-right:8px solid var(--primary);
+}
+
+
+
+.roadmapItem h2{
+    margin-bottom:15px;
+    color:var(--primary);
+}
+
+.roadmapItem p{
+    line-height:30px;
+    color:var(--dark-sub);
+}
+/* ------------ RoadMap --------------- */
+
+
+
+
+
+
+
+
+
+/* ------------ Ferramentas --------- */
+
+.toolsSection{
+    padding:140px 8%;
+}
+
+.toolsGrid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+    gap:30px;
+}
+
+.toolCard{
+    background:white;
+    padding:40px 30px;
+    border-radius:25px;
+    box-shadow:var(--shadowStrong);
+    transition:0.5s;
+    text-align:center;
+}
+
+.toolCard:hover{
+    transform:
+    translateY(-10px)
+    scale(1.03);
+}
+
+.toolCard img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    margin-bottom:25px;
+    background:#f2f2f2;
+    border-radius:20px;
+}
+
+.toolCard h2{
+    margin-bottom:20px;
+}
+
+.toolCard p{
+    color:var(--dark-sub);
+    line-height:28px;
+}
+/* ------------ Ferramentas --------- */
+
+
+
+
+
+
+
+
+
+/* ================= RESPONSIVO ================= */
+
+@media(max-width:700px){
+
+    .sectionTitle{
+        text-align:center;
+    }
+
+    .sectionTitle h1{
+        font-size:2.8rem;
+    }
+
+    .timelineLine{
+        left:20px;
+    }
+
+    .timelineItem{
+        width:100%;
+        padding-left:70px;
+        padding-right:0;
+    }
+
+    .left{
+        text-align:left;
+    }
+
+    .rightCard {
+    border-left:8px solid var(--primary);
+    border-right:none;
+}
+
+    .right{
+        margin-left:0;
+    }
+
+        .cursoTitle h1{
+        font-size:2.7rem;
+    }
+
+    .roadmapItem{
+
+        width:100%;
+
+        align-self:center !important;
+        padding:25px;
+    }
+
+}

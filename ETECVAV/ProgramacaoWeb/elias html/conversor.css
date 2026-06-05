@@ -1,0 +1,62 @@
+body {
+    background: #C4AB97;
+}
+
+.top {
+    border-radius: 50px;
+    margin: 0 0 0 0;
+    padding: 50px 100px 50px 100px;
+    text-align: center;
+    background-color: #41322d;
+    color: #C4AB97;
+}
+
+.ref {
+    text-align: center;
+    font-size: 25px;
+    margin: 20px 0 0 0;
+}
+
+.imagem {
+    border-radius: 20px;
+    margin: 100px 500px 0 500px;
+    padding: 25px 0 25px 0;
+    text-align: center;
+    background-color: #443935;
+    color: #C4AB97;
+}
+
+.imagemSUB{
+    margin-top: 30px;
+}
+
+.botao{
+  padding: 10px;
+  border: 2px solid #C4AB97;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+   transition: 0.3s;
+}
+
+button:hover {
+  background-color: #C4AB97;
+  transform: scale(1.05);
+
+}
+
+a {
+  background-color: #443935;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 18px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+a:active {
+  transform: scale(0.95);
+    
+}

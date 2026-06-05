@@ -1,0 +1,966 @@
+
+@import 
+url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500& display=swap");
+
+
+:root {
+    --primary: #ff4b5c;
+    --primary-transparent: rgba(255,75,92,0.7);
+    --white-sub: #e9e8e8;
+    --dark-sub: #777;
+    --background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7));
+    --shadow: 2px 10px 25px rgba(0,0,0,0.08), 0 5px 10px rgba(0,0,0,0.05);
+    --shadow-hover: 0 20px 40px rgba(0,0,0,0.18),  0 10px 20px rgba(0,0,0,0.12);
+    --shadowStrong: 0 20px 40px rgba(0,0,0,0.35), 0 10px 20px rgba(0,0,0,0.2);
+    --shadowStrongHover: 0 30px 60px rgba(0,0,0,0.45), 0 15px 30px rgba(0,0,0,0.3);
+    --background-Colorido: linear-gradient(135deg, rgb(22,22,70), rgb(85,18,60), rgb(160,35,60)) ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x:hidden;
+}
+
+
+
+
+/* --------animações de scrollada--------------- */
+
+@keyframes andar {
+    from {
+        opacity: 0;
+        transform: translate(-20vw);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes crescer {
+    from {
+        opacity: 0;
+        scale:(0.5);
+    }
+    to {
+        opacity: 1;
+        scale:(1);
+    }
+
+}
+@keyframes voltar {
+    from {
+        opacity: 0;
+        transform: translate(120vw);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/*---------------------------- comando: 
+animation: KEYFRAME 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%; 
+/* comando-----------------------------
+
+/* --------animações de scrollada--------------- */
+
+
+
+
+
+
+/* ----------------Informações---------------------- */
+
+
+
+
+.intro{
+    min-height:100vh;
+    width:100%;
+    background:
+    var(--background-image),
+    url('img/intro.png');
+    background-position:center;
+    background-size:cover;
+    position:relative;
+}
+
+
+.navbar{
+    position: fixed;
+    width: 100vw;
+    background-color: #e9e8e8;
+    display: flex;    
+    justify-content: space-between;
+    text-align: start;
+    padding:5px 0 0 0;
+    gap: 2rem;
+    z-index: 1;
+    backdrop-filter:blur(10px);
+    box-shadow: var(--shadow);
+    
+}
+
+
+
+.navbar img {
+    position: relative;
+    transform: translateY(-5px);
+    height: 50px;
+    width: 50px;
+    transition: all 0.5s;
+    padding: 5px;    
+}
+
+.navbar img:hover {
+    transform: scale(1.3);
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    
+}
+
+.navbar .nada{
+    
+    width:150px;
+}
+.navbar ul li{
+    list-style:none;
+    display:inline-block;
+    padding:8px 12px;
+    position:relative;
+}
+
+.navbar ul li a{
+    color: black;
+    text-decoration:none;
+    font-size: 14px;
+    }
+
+.navbar ul li::after{
+      content:'';
+      width:0%;
+      height:2px;
+      background:var(--primary);
+      display:block;
+      margin:auto;
+      transition:0.5s;
+    }
+
+.navbar ul li:hover::after{
+      width:100%;
+}
+
+
+.introTitle{
+      width:90%;
+      color:white;
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      text-align:center;
+      display: grid;
+      place-items: center;
+}
+
+
+.introTitle h1{
+        width: 36ch;
+      color: var(--primary);
+      font-size:4em;
+      white-space: nowrap;
+      overflow: hidden;
+
+      animation: escrever 2s steps(22),
+      piscar 0.5s step-end infinite alternate;
+      
+}
+
+
+.introTitle p{
+    margin:10px 0 40px;
+    font-size:14px;
+    color:#fff;
+}
+
+@keyframes escrever {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes piscar {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
+/* ----------------Informações---------------------- */
+
+
+
+
+
+
+
+
+/* ------------------Services------------------------ */
+.services {
+    scroll-margin-top: 100px;
+    margin: 200px 0 200px 0
+}
+
+.servicesTitle h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.servicesTitle p {
+    color: var(--dark-sub);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services .grupoCards {
+    margin: 50px 20% 0  20%;
+    display: flex;
+    justify-content: center;
+    gap: 20% ;
+    animation: andar 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.services .card{
+    background: var(--white-sub);
+    padding: 30px 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+    box-shadow: var(--shadow);
+}
+
+.services .card:hover{
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover)
+}
+
+.services .card h2{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    color: var(--primary);
+}
+
+/* ------------------Services------------------------ */
+
+
+
+
+
+
+
+/* -------------------Campus------------------------- */
+
+.campus {
+    scroll-margin-top: 100px;
+}
+
+.campus .campusTitle {
+    border-radius: 10px;
+    margin: 0 10% 50px 10%;
+    
+}
+
+.campus .campusTitle h1{
+    display: flex;
+    justify-content: center;
+}
+.campus .campusTitle p{
+    color: var(--dark-sub);
+    display: flex;
+    justify-content: center;
+}
+
+
+.campus .content {
+    margin: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+}
+
+
+.campus .content .image {
+    
+    animation: crescer 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%; 
+    width: 400px;
+    height: 700px;
+    box-shadow: var(--shadowStrong);
+    
+    
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+    color:#fff;
+    font-size: 2rem;
+    font-weight:800;
+    
+    border-radius:20px;
+}
+
+.campus .content .image1 {
+    background-image: var(--background-image) ,url(img/campus1.png);
+}
+.campus .content .image2 {
+    background-image: var(--background-image) ,url(img/campus2.png);
+}
+.campus .content .image3 {
+    background-image: var(--background-image) ,url(img/campus3.png);
+}
+
+.campus .content .image:hover {
+    transition: 0.5s;
+    transform: translateY(-8px);
+    box-shadow: var(--shadowStrongHover);
+}
+
+.campus .image i{
+    font-size:70px;
+    color:white;
+    opacity:0.8;
+    transition:0.5s;
+}
+
+.campus .image:hover i{
+    transform:scale(1.2);
+    opacity:1;
+}
+
+.campus .content .image1:hover{
+    background-image: linear-gradient(var(--primary-transparent)), url(img/campus1.png);
+}
+.campus .content .image2:hover{
+    background-image: linear-gradient(var(--primary-transparent)), url(img/campus2.png);
+}
+.campus .content .image3:hover{
+    background-image: linear-gradient(var(--primary-transparent)), url(img/campus3.png);
+}
+
+.campus .content .image::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -250px;
+    
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    color: white;
+    
+    opacity: 0;
+    transition: 1.2s;
+}
+
+
+.campus .content .image1:hover::after {
+    opacity: 1;
+    transform: translateY(-550px);
+    content: 'SISTEMAS WEB' ;
+}
+
+.campus .content .image2:hover::after {
+    opacity: 1;
+    transform: translateY(-550px);
+    content: 'APLICATIVOS MOBILE' ;
+}
+.campus .content .image3:hover::after {
+    opacity: 1;
+    transform: translateY(-550px);
+    content: 'E-COMMERCE' ;
+}
+/* -------------------Campus------------------------- */
+
+
+
+
+
+
+
+
+/* ---------------------- Graphics --------------------- */
+.graphics {
+    scroll-margin-top: 100px;
+    margin-top: 300px;
+}
+
+.graphicsTitle {
+    margin-bottom: 100px;
+}
+.graphics .graphicsTitle h1{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.graphicsTitle h1 i{
+    color:var(--primary);
+    margin-right:15px;
+}
+
+.graphics .graphicsTitle p{ 
+    justify-content: center;
+    display: flex;
+    color: var(--dark-sub);
+}
+
+.graphics .content  {
+    display: flex;
+    gap: 50px;
+}
+
+.graphics .content .visual {
+    display: flex;
+    align-items: end;
+}
+.graphics .content .unvisual {
+    display: flex;
+    align-items: center;
+    animation: voltar 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+.graphics .bar {
+    border-radius: 10px 10px 0 0;
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(to top, rgb(109, 68, 75), var(--primary));
+    width: 200px;
+    color: wheat;
+    box-shadow: var(--shadowStrong);
+    animation: andar 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 15%;
+}
+
+
+.graphics  .bar1 {
+    padding-top: 94px;
+}
+.graphics  .bar2 {
+    padding-top: 142px;
+}
+.graphics  .bar3 {
+    padding-top: 215px;
+}
+.graphics  .bar4 {
+    padding-top: 305px;
+}
+.graphics  .bar5 {
+    padding-top: 400px;
+}
+
+.graphics .text {
+    background-color: var(--white-sub);
+    box-shadow: var(--shadow);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--dark-sub);
+}
+
+.graphics .text:hover {
+    transition: 0.5s;
+    transform: translateY(-50px);
+    box-shadow: var(--shadow-hover);
+    color: black;
+}
+
+.graphics .graphicsTitle span{
+    color: var(--primary);
+}
+
+.graphics .content .visual.second {
+    animation: voltar 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 15%;
+}
+
+.graphics .content .unvisual.second {
+    animation: andar 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+.graphics  .other1 {
+    padding-top: 115px;
+}
+.graphics  .other2 {    
+    padding-top: 205px;
+}
+.graphics  .other3 {
+    padding-top: 268px;
+}
+.graphics  .other4 {
+    padding-top: 352px;
+}
+.graphics  .other5 {
+    padding-top: 442px;
+}
+/* ---------------------- Graphics --------------------- */
+
+
+
+
+
+/* ---------------------------- Last ------------------------ */
+.last {
+    margin-top: 300px;
+    scroll-margin-top: 100px;
+    
+}
+
+.last .lastTitle {
+    margin-bottom: 100px;
+    background-image: var(--background-image), url(img/elias.png);
+    padding: 200px;
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    color: #fff;
+    
+}
+
+.last .lastTitle h1 span {
+    color: var(--primary);
+    margin-left: 10PX;
+}
+
+.last .lastTitle h1 {
+   
+    display: flex;
+    justify-content: center;
+}
+
+.last .lastTitle p {
+    display:  flex;
+    justify-content: center;
+}
+
+.last .cards img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+
+.last .cards {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    gap: 30px;
+    padding: 20px;
+}
+
+.last .cards .card {
+    animation: andar 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 15%;
+    width: 350px;
+
+    background: var(--white-sub);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.5s;
+}
+
+
+.last .cards .text {
+    padding: 20px;
+    text-align: center;
+}
+
+.last .cards .text h1 {
+    color: var(--primary);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.last .cards .text p {
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--dark-sub);
+}
+
+.last .cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+.last .card:hover p{
+    color: black;
+}
+/* ---------------------------- Last ------------------------ */
+
+
+
+
+
+
+
+
+/* ----------------------------- Footer ---------------------------- */
+footer{
+    margin-top:400px;
+    background:#111;
+    color: #fff;
+    
+    gap: 20px;
+}
+
+.footerPrincipal {
+    padding:60px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footerSection, .footerBottom {
+    padding: 20px;
+}
+
+.footerSection a {
+    display: block;
+    padding: 3px;
+    text-decoration: none;
+    color: var(--dark-sub);
+    transition: 0.5s;
+    border-radius: 5px ;
+}
+
+.footerSection a:hover {
+    background-color: var(--primary);
+    color: var(--white-sub);
+    transform: scale(1.10);
+}
+
+.footerExtra {
+    background-color: #ff4b5c;
+    display: flex;
+    justify-content: center;
+}
+
+.footerBottom {
+    color: #fff;
+}
+/* ----------------------------- Footer ---------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------Responsivo para Celular--------------- */
+@media(max-width:700px){
+    
+    .navbar{
+        
+        position:fixed;
+        
+        width:100%;
+
+        height:auto;
+
+        padding:12px 20px;
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+        background:rgba(233,232,232,0.95);
+
+        backdrop-filter:blur(10px);
+    }
+
+    .navbar img{
+
+        transform:none;
+        
+        width:40px;
+
+        height:40px;
+    }
+
+    .navbar .nada{
+        display:none;
+    }
+
+    .navbar ul{
+
+        display:flex;
+
+        gap:15px;
+
+        width:auto;
+
+        padding:0;
+    }
+
+    .navbar ul li{
+
+        padding:0;
+    }
+
+    .navbar ul li a{
+
+        font-size:0.85rem;
+    }
+
+    
+    .introTitle{
+        
+        margin-top: 100px;
+        width:90%;
+        padding:0 10px;
+    }
+    
+    .introTitle h1{
+
+    width:100%;
+
+    font-size:4em;
+    line-height:60px;
+
+    white-space:normal;
+
+    border-right:none;
+
+    animation:none;
+
+}
+    
+    .introTitle p{
+        font-size:14px;
+        line-height:24px;
+    }
+    
+    .grupoCards{
+        flex-direction: column;
+        
+    }
+    
+    .card {
+        
+        margin-top: 50px;
+    }
+    
+    .campus .content{
+        
+        margin:50px 20px;
+        
+        flex-direction:column;
+        
+        align-items:center;
+        
+        gap:40px;
+    }
+    
+    .campus .content .image{
+        
+        width:100%;
+        max-width:350px;
+        
+        height:400px;
+        
+        margin-bottom:0;
+    }
+    
+    .campus .content .image1:hover::after {
+
+    transform: translateY(-420px);
+    }
+
+    .campus .content .image2:hover::after {
+
+    transform: translateY(-420px);
+    }
+    .campus .content .image3:hover::after {
+    transform: translateY(-420px);
+    }
+
+    .campus .campusTitle h1{
+        text-align:center;
+        font-size:32px;
+    }
+    
+    .campus .campusTitle p{
+        text-align:center;
+        padding:0 20px;
+    }
+    
+    
+    .graphics .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.graphics .graphicsTitle h1 {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.graphics .graphicsTitle span {
+    display: block;
+    font-size: 1.2em;
+}
+
+.graphics .content .visual {
+    display: block;
+    width: 100%;
+}
+
+.graphics .content .unvisual {
+    width: 100%;
+    justify-content: center;
+}
+
+.graphics .bar {
+    width: 10px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 0 10px 10px 0;
+
+    transition: 0.5s;
+    margin: 10px 0;
+    padding: 20px;
+}
+
+.graphics .bar1 {
+    width: 27%;
+
+}
+
+.graphics .text:hover {
+    transform: translateY(-30px);
+}
+
+.graphics .bar2 {
+
+    width: 41%;
+}
+
+.graphics .bar3 {
+    width: 58%;
+}
+
+.graphics .bar4 {
+    width: 76%;
+}
+
+.graphics .bar5 {
+    width: 96%;
+}
+
+.graphics .other1 {
+    width: 27%;
+
+}
+
+.graphics .other2 {
+
+    width: 41%;
+}
+
+.graphics .other3 {
+    width: 58%;
+}
+
+.graphics .other4 {
+    width: 76%;
+}
+
+.graphics .other5 {
+    width: 96%;
+}
+
+.last .lastTitle {
+    padding: 20px
+}
+
+.last .cards {
+    flex-direction: column;
+    align-items: center;
+}
+
+.last .cards .card {
+    width: 100%;
+    max-width: 350px;
+}
+
+.footerPrincipal {
+    display: block;
+}
+
+}
+/* ------------------Responsivo para Celular--------------- */

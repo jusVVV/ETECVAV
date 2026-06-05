@@ -1,0 +1,51 @@
+body {
+    background: #C4AB97;
+    margin: 0 0 0 0;
+}
+
+
+.top {
+    border-radius: 50px;
+    margin: 0 0 0 0;
+    padding: 50px 100px 50px 100px;
+    text-align: center;
+    background-color: #443935;
+    color: #C4AB97;
+}
+
+.eliasIMG {
+    margin: 0px 0 0 440px;
+    border-radius: 100px;
+        
+}
+
+p {
+    margin-right: 0px 0px 0px 20px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 23px;
+    color: #C4AB97;
+    background-color: #443935;
+   
+}
+
+.conv {
+    background-color: #695a4d;
+    margin: 200px 0px 0 570px;
+    text-align: center;
+    width: 500px;
+}
+
+div {
+    margin-top: 200px;
+}
+
+footer {
+    margin-top: 400px;
+    text-align: center;
+    background-color: #443935;
+    color: #695a4d;
+    padding: 30px 0 30px 0;
+    
+}

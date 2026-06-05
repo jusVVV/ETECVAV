@@ -1,0 +1,214 @@
+/*------------- titulos ----------- */
+.sobreTitle{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.sobreTitle span{
+    color:var(--primary);
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+.sobreTitle h1{
+    font-size:4rem;
+    margin:20px 0;
+}
+
+.sobreTitle p{
+    color:var(--dark-sub);
+}
+/*------------- titulos ----------- */
+
+
+
+
+
+/* -------------- Objetivo ----------- */
+
+.sobreObjetivo{
+    padding:120px 8%;
+}
+
+.objetivoCard{
+    animation: andar 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%; 
+
+    max-width:1100px;
+    margin:auto;
+    padding:50px;
+    border-radius:25px;
+    background:white;
+    box-shadow:var(--shadowStrong);
+    border-left:8px solid var(--primary);
+}
+
+.objetivoCard p{
+    color:var(--dark-sub);
+    line-height:2;
+    font-size:1.05rem;
+    margin-bottom:25px;
+}
+/* -------------- Objetivo ----------- */
+
+
+
+
+
+
+
+
+/*------------------ Autores -------------- */
+
+.sobreAutores{
+    padding:120px 8%;
+}
+
+.sobreEquipe{
+    animation: andar 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%; 
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.sobreBox{
+    flex:1;
+    min-width:320px;
+    
+    padding:40px;
+    border-radius:25px;
+    background:white;
+    box-shadow:var(--shadowStrong);
+    border-top:6px solid var(--primary);
+}
+
+.sobreBoxLeft {
+    animation: andar 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%; 
+
+}
+
+.sobreBoxRight {
+    animation: voltar 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%; 
+}
+
+.sobreBox h2{
+    margin-bottom:30px;
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.nomes{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.nomes p{
+    padding:18px 20px;
+    border-radius:12px;
+    background:#f3f3f3;
+    color:var(--dark-sub);
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nomes p:hover{
+    transform:translateX(8px);
+    background:#e5e5e5;
+    color:black;
+}
+/*------------------ Autores -------------- */
+
+
+
+
+
+
+/*------------------ Referencias ----------------- */
+
+.referenciasSection{
+    padding:120px 8%;
+    background:#fafafa;
+}
+
+.referenciasContainer{
+    max-width:1200px;
+    margin:auto;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:var(--shadowStrong);
+    background:white;
+}
+
+.referenciaLinha{
+    padding:28px 35px;
+    border-bottom:1px solid #ddd;
+    transition:0.3s;
+}
+
+.referenciaLinha:last-child{
+    border-bottom:none;
+}
+
+.referenciaLinha:hover{
+    background:#ececec;
+}
+
+.referenciaLinha p{
+    color:var(--dark-sub);
+    
+    line-height:1.9;
+}
+/*------------------ Referencias ----------------- */
+
+
+
+
+
+
+/* -------------------- Responsivo ---------------- */
+
+@media(max-width:700px){
+    
+    .sobreTitle h1{
+        font-size:2.5rem;
+    }
+    
+    .objetivoCard{
+        padding:30px;
+    }
+    
+    .objetivoCard p{
+        font-size:0.95rem;
+        line-height:1.9;
+    }
+    
+    .sobreBox{
+        padding:30px;
+    }
+    
+    .sobreBox h2{
+        font-size:1.3rem;
+    }
+    
+    .referenciaLinha{
+        padding:22px;
+    }
+    
+    .referenciaLinha p{
+        font-size:0.92rem;
+    }
+}
+/* -------------------- Responsivo ---------------- */
